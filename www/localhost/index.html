@@ -1,0 +1,38 @@
+<h1 style="text-align: center;">欢迎使用DNMP！</h1>
+<h2>当前时间：<span id="current-time"></span></h2>
+
+<div style="display: flex;justify-content: space-between;font-size: 24px;font-weight: bolder">
+    <div>版本选择：</div>
+    <div><a href="/">Home</a></div>
+    <div><a href="/72/">PHP7.2</a></div>
+    <div><a href="/73/">PHP7.3</a></div>
+    <div><a href="/74/">PHP7.4</a></div>
+    <div><a href="/80/">PHP8.0</a></div>
+    <div><a href="/81/">PHP8.1</a></div>
+    <div><a href="/82/">PHP8.2</a></div>
+    <div><a href="/83/">PHP8.3</a></div>
+    <div><a href="/84/">PHP8.4</a></div>
+</div>
+
+<div style="display: flex;justify-content: center;align-items: center;position: absolute;bottom: 0;left: 0;right: 0;height: 50px;">
+    <a style="text-decoration: none;color: #000;" href="https://beian.miit.gov.cn/" target="_blank">皖ICP备19024996号</a>
+</div>
+
+<script src="./js/moment.min.js"></script>
+<script>
+    // 获取元素
+    let currentTimeEle = document.getElementById("current-time");
+
+    function getTime() {
+        // 获取当前时间
+        let date = new Date();
+        // 设置元素的文本
+        currentTimeEle.innerHTML =  moment(date).format("YYYY-MM-DD HH:mm:ss");
+    }
+
+    // 定时器，动态更新时间
+    setInterval(getTime, 1000); // 每秒更新一次
+
+    // 初始化时间
+    getTime();
+</script>
