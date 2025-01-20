@@ -203,3 +203,22 @@ server{
     }
 }
 # +------------------ end ------------------+
+
+###
+server{
+    listen       80;
+    listen  [::]:80;
+    server_name  local.test1.cc;
+    root   /usr/share/nginx/html/test1/public;
+    index  index.php index.html index.htm;
+    location / {
+        # Matches URLS `$_GET['_url']`
+        try_files $uri $uri/ /index.php?_url=$uri&$args;
+    }
+
+    location ~ [^/]\.php(/|$) {
+        # 注意这里和php-fpm的挂载目录一致
+        root           /var/www/html/test1/public;
+        include php/enable-php-74.conf;
+    }
+}
