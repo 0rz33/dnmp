@@ -29,7 +29,7 @@ services:
 
   php72:
     build:
-      context: ./servers/php/php7.2:latest
+      context: ./servers/php/php7.2
       dockerfile: Dockerfile
       args:
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -56,7 +56,7 @@ services:
 
   php73:
     build:
-      context: ./servers/php/php7.3:latest
+      context: ./servers/php/php7.3
       dockerfile: Dockerfile
       args:
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
