@@ -229,6 +229,7 @@ services:
     restart: always
     ports:
       - "9007:9000"
+      - "18888:18888"
     volumes:
       - "./servers/php/php8.4/config/php.ini:/usr/local/etc/php/php.ini:ro"                   # php.ini
       - "./servers/php/php8.4/config/php-fpm.conf:/usr/local/etc/php-fpm.conf:rw"             # php-fpm.conf
