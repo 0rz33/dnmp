@@ -11,6 +11,7 @@ echo '<div><a href="/">Home</a></div>';
 echo '<div><a href="/72/">PHP7.2</a></div>';
 echo '<div><a href="/73/">PHP7.3</a></div>';
 echo '<div><a href="/74/">PHP7.4</a></div>';
+echo '<div><a href="/7433/">PHP7.4.33</a></div>';
 echo '<div><a href="/80/">PHP8.0</a></div>';
 echo '<div><a href="/81/">PHP8.1</a></div>';
 echo '<div><a href="/82/">PHP8.2</a></div>';

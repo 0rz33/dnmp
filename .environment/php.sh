@@ -38,6 +38,19 @@ php74()
         dnmp_php74 php "$@"
 }
 
+php7433()
+{
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --volume $PWD:/var/www/html:rw \
+        --workdir /var/www/html \
+        dnmp_php7433 php "$@"
+}
+
 php80()
 {
     tty=
